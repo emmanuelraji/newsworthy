@@ -18,9 +18,15 @@ window.addEventListener("load", () => {
     news.forEach((article) => {
       const div = document.createElement("div");
       div.classList.add("news-item");
-      const h1 = document.createElement("h1");
-      h1.textContent = article.author;
-      div.appendChild(h1);
+      const title = document.createElement("h2");
+      title.textContent = article.title;
+      const desc = document.createElement("p");
+      desc.textContent = article.description;
+      const auth = document.createElement("p");
+      auth.textContent = article.author;
+      div.appendChild(title);
+      div.appendChild(desc);
+      div.appendChild(auth);
       divNews.appendChild(div);
     });
     return divNews;
@@ -34,8 +40,8 @@ window.addEventListener("load", () => {
       }
       const json = await response.json();
       const data = await json.articles;
-      return data;
       console.log(data);
+      return data;
       //return data;
     } catch (error) {
       console.log(error);

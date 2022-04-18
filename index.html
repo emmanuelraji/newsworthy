@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="logo">Newsworthy</h1>
-      <form id="search-form">
-        <!-- <div class="searchbar"> -->
-        <input type="text" id="news-input" placeholder="Search News Topic" />
-        <!-- </div> -->
-        <input type="submit" id="news-submit" value="Search Topic" />
-      </form>
+    <header>
+      <div class="header">
+        <div class="container header-content">
+          <h1 class="logo">Newsworthy</h1>
+          <form id="search-form">
+            <input type="text" id="news-input" placeholder="" />
+            <input type="submit" id="news-submit" value="Search" />
+          </form>
+        </div>
+      </div>
     </header>
-    <div id="root"></div>
+    <main class="container">
+      <section class="news-section">
+        <div id="root"></div>
+      </section>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
